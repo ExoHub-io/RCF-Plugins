@@ -1,11 +1,11 @@
 # Lucide Support
 > You wanna use .svg from lucide cdn?
 ```bash
-node upy.js install lucideSupport
+node snaplug.js install lucideSupport
 ```
 
 # Example Plugin
 > Code from documentation<br>
 ```bash
-node upy.js install examplePlugin
+node snaplug.js install examplePlugin
 ```
