@@ -4,4 +4,4 @@
 
 # Example Plugin
 > Code from documentation
-[Get](<https://github.com/ExoHub-io/RCF-Plugins/tree/main/plugins/lucide_support>)
+[Get](<https://github.com/ExoHub-io/RCF-Plugins/tree/main/plugins/example_plugin>)
