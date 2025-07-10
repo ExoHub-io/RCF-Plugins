@@ -1,4 +1,4 @@
-# RCF-Plugins
+<h1>Plugins list</h1>
 
 # Lucide Support
 ## You wanna use .svg from lucide cdn? Press below to install
