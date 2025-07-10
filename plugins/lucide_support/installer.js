@@ -57,7 +57,7 @@ const pluginsGitPath = 'https://raw.githubusercontent.com/ExoHub-io/RCF-Plugins/
             // ✅ Extract text between <pre>...</pre> if it exists
             const matchExample = contentExample.match(/<pre[^>]*>([\s\S]*?)<\/pre>/i);
             if (matchExample) {
-                content = matchExample[1]; // Only the content inside <pre>
+                contentExample = matchExample[1]; // Only the content inside <pre>
             }
 
             // Write to file
