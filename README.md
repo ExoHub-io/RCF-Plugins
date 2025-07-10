@@ -1,5 +1,5 @@
 # Lucide Support
-> You wanna use .svg from lucide cdn? Press below to install<br>
+> You wanna use .svg from lucide cdn?
 ```bash
 node upy.js install lucideSupport
 ```
