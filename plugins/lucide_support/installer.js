@@ -61,7 +61,7 @@ const pluginsGitPath = 'https://raw.githubusercontent.com/ExoHub-io/RCF-Plugins/
             }
 
             // Write to file
-            fs.writeFileSync(path.join(pagesFolder, pageFileName), content);
+            fs.writeFileSync(path.join(pagesFolder, pageFileName), contentExample);
             // end
             console.log(pluginsFileName + ' : Installed successfully!');
         } catch (error) {
