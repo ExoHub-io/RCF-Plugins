@@ -4,10 +4,12 @@ const path = require('path');
 const axios = require('axios');
 
 // VARS
-const pluginsFolder = 'RocketFramework/plugins/';
-const pagesFolder = 'structure/pages/';
-const pluginsFileName = 'lucide_support.js';
 const pageFileName = 'lucideExample.html';
+const pagesFolder = 'structure/pages/';
+
+
+const pluginsFolder = 'RocketFramework/plugins/';
+const pluginsFileName = 'lucide_support.js';
 const pluginsName = 'LucideSupport';
 const pluginsGitPath = 'https://raw.githubusercontent.com/ExoHub-io/RCF-Plugins/refs/heads/main/plugins/lucide_support/';
 
@@ -41,10 +43,10 @@ const pluginsGitPath = 'https://raw.githubusercontent.com/ExoHub-io/RCF-Plugins/
             }
 
             // Write to file
-            fs.writeFileSync(path.join(pluginsFolder, pageFileName), content);
+            fs.writeFileSync(path.join(pluginsFolder, pluginsFileName), content);
 
             // examples
-            const respExample = await axios.get(pluginsGitPath + pluginsFileName, {
+            const respExample = await axios.get(pluginsGitPath + pageFileName, {
                 headers: {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
                 }
