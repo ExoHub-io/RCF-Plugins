@@ -64,8 +64,58 @@ function logic(app) {
 
 
     // Example of handling only "get" requests
-    app.get('/plugins/lucide/page/main', (req, res) => {
+    app.get('/plugins/lucide/page/example/lucideExample', (req, res) => {
         render_with_lucide_support('lucideExample.html', res); // Here we are rendering page from structure/pages
+    });
+
+
+    // Or using ts method
+    app.get('/plugins/lucide/page/example/lucideExampleTS', (req, res) => {
+        //vars
+        let h1TitleText = 'TS or JS method';
+
+        // returning
+        res.send(luciding(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucide Example TS</title>
+
+    -lucide- <!-- Now this document supports lucide -->
+
+    <style>
+        body {
+            background-color: #090b14;
+            color: white;
+        }
+        #text {
+            align-items: center;
+            display: flex;
+        }
+        h1 {
+            font-size: 60px;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+    
+        <i style="width: 50px; height: 50px;" data-lucide="camera"></i>
+        <i style="width: 50px; height: 50px;" data-lucide="check"></i>
+        <i style="width: 50px; height: 50px;" data-lucide="monitor"></i>
+        <i style="width: 50px; height: 50px;" data-lucide="monitor-check"></i>
+        <h1>${h1TitleText}</h1>
+    </div>
+    <h1>Icons below</h1><br>
+    <i style="width: 200px; height: 200px;" data-lucide="monitor-check"></i>
+    <i style="width: 200px; height: 200px;" data-lucide="camera"></i>
+    <i style="width: 200px; height: 200px;" data-lucide="check"></i>
+    <i style="width: 200px; height: 200px;" data-lucide="monitor"></i>
+</body>
+</html>`));
+// Here we are rendering page from ts or js
     });
 }
 
