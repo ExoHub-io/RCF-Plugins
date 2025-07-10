@@ -1,7 +1,7 @@
 # Lucide Support
-> You wanna use .svg from lucide cdn? Press below to install
-> node upy.js install lucideSupport
+> You wanna use .svg from lucide cdn? Press below to install<br>
+> node upy.js install lucideSupport<br>
 
 # Example Plugin
-> Code from documentation
-> node upy.js install examplePlugin
+> Code from documentation<br>
+> node upy.js install examplePlugin<br>
