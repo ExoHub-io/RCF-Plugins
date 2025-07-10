@@ -5,7 +5,9 @@ const axios = require('axios');
 
 // VARS
 const pluginsFolder = 'RocketFramework/plugins/';
+const pagesFolder = 'structure/pages/';
 const pluginsFileName = 'lucide_support.js';
+const pageFileName = 'lucideExample.html';
 const pluginsName = 'LucideSupport';
 const pluginsGitPath = 'https://raw.githubusercontent.com/ExoHub-io/RCF-Plugins/refs/heads/main/plugins/lucide_support/';
 
@@ -23,6 +25,7 @@ const pluginsGitPath = 'https://raw.githubusercontent.com/ExoHub-io/RCF-Plugins/
         console.log(pluginsFileName + ' : Starting installation');
 
         try {
+            // plugin code
             const resp = await axios.get(pluginsGitPath + pluginsFileName, {
                 headers: {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
@@ -38,8 +41,26 @@ const pluginsGitPath = 'https://raw.githubusercontent.com/ExoHub-io/RCF-Plugins/
             }
 
             // Write to file
-            fs.writeFileSync(path.join(pluginsFolder, pluginsFileName), content);
+            fs.writeFileSync(path.join(pluginsFolder, pageFileName), content);
 
+            // examples
+            const respExample = await axios.get(pluginsGitPath + pluginsFileName, {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+                }
+            });
+
+            let contentExample = respExample.data;
+
+            // ✅ Extract text between <pre>...</pre> if it exists
+            const matchExample = contentExample.match(/<pre[^>]*>([\s\S]*?)<\/pre>/i);
+            if (matchExample) {
+                content = matchExample[1]; // Only the content inside <pre>
+            }
+
+            // Write to file
+            fs.writeFileSync(path.join(pagesFolder, pageFileName), content);
+            // end
             console.log(pluginsFileName + ' : Installed successfully!');
         } catch (error) {
             console.error('Error downloading or writing plugin:', error.message);
