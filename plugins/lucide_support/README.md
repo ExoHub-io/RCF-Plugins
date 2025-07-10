@@ -4,6 +4,4 @@
 1. Go to your project folder
 2. Download neccessary ```installer.js```
 3. ```npm install axios```
-4. Write command ```bash
-node installer.js
-```
+4. Write command ```node installer.js```
