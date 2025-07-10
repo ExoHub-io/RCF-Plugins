@@ -7,7 +7,19 @@ const fs = require('fs');
 const path = require('path');
 
 function success() {
-    console.warn('lucide_support.js loaded!')
+    console.warn('Lucide Support loaded!');
+    console.warn(`
+Lucide greeting
+
+// To use icons in html
+// write in the head of .html: '-lucide-'
+// render .html through 'render_with_lucide_support()'
+// https://lucide.dev/icons/
+// and when you want: <i data-lucide="icon_name"></i>
+// like: '<i data-lucide="camera"></i>'
+
+Lucide greeting ended
+`);
 }
 
 function luciding(page_content) {
