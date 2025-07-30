@@ -10,7 +10,7 @@ node snaplug.js install examplePlugin
 node snaplug.js install lucideSupport
 ```
 
-# MekaFaster Plugin
+# MakeFaster Plugin
 > Now you can cache your pages<br>
 ```bash
 node snaplug.js install mkFast
